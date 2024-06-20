@@ -1,15 +1,17 @@
 # Example Dockerfile
 FROM node:14
 
-# Create app directory
+# Set the working directory inside the container
 WORKDIR /usr/src/app
 
-# Install app dependencies
+# Copy package.json and package-lock.json (if applicable)
 COPY package*.json ./
+
+# Install dependencies
 RUN npm install
 
-# Bundle app source
+# Copy the rest of the application files
 COPY . .
 
-EXPOSE 8080
-CMD [ "node", "app.js" ]
+# Specify the command to run your application
+CMD ["node", "app.js"]
