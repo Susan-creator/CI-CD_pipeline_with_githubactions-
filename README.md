@@ -35,7 +35,7 @@ Software and tools that need to be installed to run the project locally.
 
 This project uses [GitHub Actions](https://github.com/features/actions) for continuous integration.
 
-- The CI pipeline is defined in `.github/workflows/ci.yml`.
+- The CI pipeline is defined in `.github/workflows/main.yml`.
 - On every push and pull request to the `main` branch, the workflow:
   - Checks out the code.
   - Sets up JDK 11.
@@ -54,7 +54,7 @@ The project is containerized using Docker.
 
 Deployment is managed using Kubernetes.
 
-- Deployment and service configurations are defined in `k8s-deployment.yml` and `k8s-service.yml`.
+- Deployment and service configurations are defined in `deployment.yml` and `service.yml`.
 - The CI workflow deploys the application to a Kubernetes cluster.
 
 #### Example Workflow Configuration
