@@ -17,3 +17,6 @@ spec:
         image: susan778/ci-cd_pipeline_with_githubactions:latest
         ports:
         - containerPort: 8080
+        env:
+          - name: NODE_ENV
+            value: "production"
